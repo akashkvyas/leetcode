@@ -17,7 +17,6 @@ class Solution {
 
         unordered_map<char, int> s_count;
         unordered_map<char, int> t_count;
-
         for (size_t i = 0; i < s.size(); ++i) {
             ++s_count[s[i]];
             ++t_count[t[i]];
@@ -26,7 +25,6 @@ class Solution {
         for (auto s_pair : s_count) {
             if (s_pair.second != t_count[s_pair.first]) return false;
         }
-
         return true;
     }
 };
